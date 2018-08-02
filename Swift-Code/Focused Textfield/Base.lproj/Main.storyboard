@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Focused_Textfield" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pA4-Vi-AXM">
+                                <rect key="frame" x="0.0" y="20" width="0.0" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" id="p9c-o3-bR6"/>
+                                    <constraint firstAttribute="height" id="q2d-eu-2sB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9xa-yS-woB">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k9k-4U-Iei">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="yQR-bP-hBt">
+                                                <rect key="frame" x="20" y="100" width="280" height="208"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Y6-oj-mQb" customClass="FocusedTextField" customModule="Focused_Textfield" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="36"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="0Y6-oj-mQb" secondAttribute="height" multiplier="70:9" id="YPr-GG-9BO"/>
+                                                        </constraints>
+                                                        <color key="textColor" red="0.83529411760000005" green="0.83529411760000005" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="leftIcon" value="ic_email"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="iconInset">
+                                                                <real key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="R8z-Hd-ZKB"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zq6-g6-xJW" customClass="FocusedTextField" customModule="Focused_Textfield" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="86" width="280" height="36"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" red="0.83529411760000005" green="0.83529411760000005" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="iconInset">
+                                                                <real key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="image" keyPath="leftIcon" value="ic_password"/>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                                <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="1t9-MB-ouB"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVe-EK-7nD">
+                                                        <rect key="frame" x="0.0" y="172" width="280" height="36"/>
+                                                        <color key="backgroundColor" red="0.10196078431372549" green="0.56470588235294117" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                                        <state key="normal" title="Login">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="loginButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="o98-Lx-gcH"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="yQR-bP-hBt" secondAttribute="trailing" constant="20" id="Cl9-Yq-ZUF"/>
+                                            <constraint firstItem="yQR-bP-hBt" firstAttribute="leading" secondItem="k9k-4U-Iei" secondAttribute="leading" constant="20" id="cdf-sB-Oy2"/>
+                                            <constraint firstItem="yQR-bP-hBt" firstAttribute="top" secondItem="k9k-4U-Iei" secondAttribute="top" constant="100" id="rUh-Ot-zv1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="k9k-4U-Iei" firstAttribute="top" secondItem="9xa-yS-woB" secondAttribute="top" id="0dF-HM-HNH"/>
+                                    <constraint firstItem="k9k-4U-Iei" firstAttribute="height" secondItem="9xa-yS-woB" secondAttribute="height" id="87N-T9-CnN"/>
+                                    <constraint firstAttribute="bottom" secondItem="k9k-4U-Iei" secondAttribute="bottom" id="RFw-qN-ai2"/>
+                                    <constraint firstAttribute="trailing" secondItem="k9k-4U-Iei" secondAttribute="trailing" id="fo6-pN-41q"/>
+                                    <constraint firstItem="k9k-4U-Iei" firstAttribute="leading" secondItem="9xa-yS-woB" secondAttribute="leading" id="gnB-Bw-rG0"/>
+                                    <constraint firstItem="k9k-4U-Iei" firstAttribute="centerX" secondItem="9xa-yS-woB" secondAttribute="centerX" id="uiQ-te-bcN"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20661807060241699" green="0.22328609228134155" blue="0.24443221092224121" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pA4-Vi-AXM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="85k-sk-MO5"/>
+                            <constraint firstItem="9xa-yS-woB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CLb-in-8i7"/>
+                            <constraint firstAttribute="trailing" secondItem="9xa-yS-woB" secondAttribute="trailing" id="DA2-jA-N5B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9xa-yS-woB" secondAttribute="bottom" id="HJW-Sb-Azy"/>
+                            <constraint firstItem="9xa-yS-woB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cax-Tp-mr2"/>
+                            <constraint firstItem="pA4-Vi-AXM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kre-1E-Lao"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="buttonLogin" destination="SVe-EK-7nD" id="J95-MY-fFD"/>
+                        <outlet property="textFieldEmail" destination="0Y6-oj-mQb" id="tes-ko-97l"/>
+                        <outlet property="textFieldPassword" destination="Zq6-g6-xJW" id="wfq-0z-2rJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_email" width="16" height="16"/>
+        <image name="ic_password" width="16" height="16"/>
+    </resources>
+</document>
